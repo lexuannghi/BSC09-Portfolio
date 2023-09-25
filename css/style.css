@@ -1,0 +1,177 @@
+header .navbar .nav-link {
+  color: white;
+  position: relative;
+}
+.z-1 {
+  z-index: 10;
+}
+header .navbar-nav .nav-link.active {
+  color: green;
+}
+header .navbar-nav .nav-link.active::before {
+  width: 100%;
+}
+/* hover navbar */
+header .collapse .nav-link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #35a22c;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+header .collapse .nav-item {
+  margin: 0 10px;
+}
+header .collapse .nav-link:hover::before {
+  width: 100%;
+}
+header .collapse .nav-link:hover {
+  color: green;
+}
+/* carousel */
+.carousel-caption img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.carousel-caption h5 {
+  font-size: 56px;
+}
+.container-carousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+.container-carousel .carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #272b3680;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  object-fit: cover;
+
+}
+.carousel-indicators button.active {
+  background-color: #35a22c;
+}
+/* project */
+/* bg avtive btn */
+.project .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #35a22c;
+  color: white;
+  border-color: #35a22c;
+}
+/* border btn */
+.project .nav-pills .nav-link {
+  color: var(--bs-nav-link-disabled-color);
+  background-color: transparent;
+  border-color: transparent;
+  border: 1px solid grey;
+  margin: 0 8px;
+  object-fit: cover;
+}
+.card-item img {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.card-item {
+  border: 1px solid rgba(181, 181, 181, 0.262);
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  object-fit: cover;
+}
+.project .project-content .tab-content .card-item:hover {
+  border-color: #35a22c;
+  border-radius: 20px;
+}
+.project .project-content .tab-content .card-item:hover h5 {
+  color: #35a22c;
+  transition: all 0.2s ease-in-out;
+}
+/* available */
+.available {
+  background: url(./../images/3.jpg);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+.overlay {
+  background: rgba(7, 10, 12, 0.72);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.available .container {
+  position: relative;
+  z-index: 10;
+}
+.available .bg-avai-content {
+  padding: 50px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.available .bg-avai-content i {
+  color: green;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 576px) {
+  .carousel-caption h5 {
+    color: red;
+  }
+  .project-title {
+    color: black
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel-caption h5 {
+    color: red;
+  }
+  .project-title {
+    color: yellow
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carousel-caption h5 {
+    color: red;
+  }
+  .project-title {
+    color: red;
+  }
+}
+/* max-width được sử dụng tạo ra giao diênj cho các thiết bị lớn trước */
+/* khi sử dug maxwwidth sẽ viết theo thứ tự từ trên xuống  */
+@media screen and (max-width: 992px) {
+  .carousel-caption h5 {
+    font-size: 35px;
+    color: violet;
+  }
+  header .navbar-brand span {
+    color: red !important;
+  }
+}
+/* thiết bị di động */
+@media screen and (max-width: 576px) {
+  header .navbar-brand span {
+    color: #35a22c !important;
+  }
+}
